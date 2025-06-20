@@ -4,8 +4,12 @@
 Project BACH is an experiment in algorithmic music composition using deep learning. The goal is to continue Johann Sebastian Bach's unfinished fugue [(_Contrapunctus 14_)](https://www.youtube.com/watch?v=JbM3VTIvOBk&ab_channel=fabian1333) by training an LSTM neural network on the original score and generating plausible musical continuations.
 
 ## Data
-- **Source:** The dataset consists of a 4-voice, text-converted part of Bach's unfinished _Contrapunctus 14_.
-- **Format:** The input data (`data/input.txt`) is a symbolic representation of the music, suitable for sequence modeling.
+- **Source:** The dataset consists of a 4-voice, text-converted part of Bach's unfinished _Contrapunctus 14_. The data format delivered by the Santa Fé Institute competition in 1993 consists of 4 voices, each encoding the music score as a sequence of integers which represent pitch. 
+- **Format:** The input data (`data/input.txt`) is a symbolic representation of the music, suitable for sequence modeling. The file represents each of the 4 voices as a (long, column) vector made from 0's and piano key indices
+    - A typical part of a voice vector looks like ... 0 0 0 0 56 56 56 56 58 58 58 58 58 58 58 58 70 70 70 70 .... 
+    - The 0's denote breaks (no sound) and the other integers denote tones. The pitch of a tone is given by the integer
+    - The duration is represented by repeating a key number. 
+    - Thus, in the above example, the "58" note is heard twice as long as the "56" note.
 - **Preprocessing:** The data was tokenized and formatted for input into a neural network, with each voice represented as a separate sequence.
 
 ## Model
