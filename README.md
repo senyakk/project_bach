@@ -5,4 +5,4 @@ Attached input file is the 4-voice txt-converted part of Bach's unfinished piece
 
 Attached also is the trained model.
 
-The mirrored notebook can be found on Kaggle: https://www.kaggle.com/code/arsenijsgolicins/project-bach/edit
+The mirrored notebook can be found on [Kaggle](https://www.kaggle.com/code/arsenijsgolicins/project-bach/edit)
