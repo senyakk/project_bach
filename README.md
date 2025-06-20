@@ -1,4 +1,4 @@
-# Project BACH: LSTM Continuation of Bach's Fugue
+# LSTM Continuation of Bach's Fugue
 
 ## Overview
 Project BACH is an experiment in algorithmic music composition using deep learning. The goal is to continue Johann Sebastian Bach's unfinished fugue [(_Contrapunctus 14_)](https://www.youtube.com/watch?v=JbM3VTIvOBk&ab_channel=fabian1333) by training an LSTM neural network on the original score and generating plausible musical continuations.
